@@ -10,6 +10,7 @@
 [index08.html](basic/index08.html)<br>
 [index09.html](basic/index09.html)<br>
 [index10.html](basic/index10.html)<br>
+[index10.html](basic/index-vega-lite.html)<br>
 
 ---
 
