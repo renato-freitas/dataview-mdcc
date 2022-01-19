@@ -12,9 +12,10 @@
 [index10.html](basic/index10.html)<br>
 [index-vega-lite.html](basic/index-vega-lite.html)<br>
 
----
 
 ## Trabalho Final
 [Page](basic/tf.html)<br>
+
+---
 
 Para saber mais sobre a sintaxe markdown, veja [este guia](https://guides.github.com/features/mastering-markdown/).
