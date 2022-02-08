@@ -1,0 +1,17 @@
+.dot1 {
+   height: 10px;
+   width: 10px;
+   background-color: #f28e2c;
+   opacity: 0.69;
+   border-radius: 50%;
+   display: inline-block;
+}
+
+.dot2 {
+   height: 10px;
+   width: 10px;
+   background-color: #4e79a7;
+   opacity: 0.69;
+   border-radius: 50%;
+   display: inline-block;
+ }
