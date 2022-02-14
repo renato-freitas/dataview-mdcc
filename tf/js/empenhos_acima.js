@@ -47,7 +47,8 @@ function scatters(empenhos) {
       .attr("fill", (d) =>
          d.valor_empenhado > d.valor_anterior_saldo_dotacao
             ? "#f28e2c"
-            : "#4e79a7"
+            : "#3b84d1"
+         // : "#4e79a7"
       )
       .attr("stroke-width", 1.5)
       .attr("fill-opacity", 0.6)

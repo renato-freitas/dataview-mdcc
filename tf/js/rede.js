@@ -8,7 +8,13 @@ function rede(empenhos) {
       width = 530,
       height = 380;
 
-   var color = d3.scaleOrdinal(d3.schemeCategory20);
+   // var color = d3.scaleOrdinal(d3.schemeCategory20);
+   let color = {
+      "1": "#1f77b4", //cidade
+      "2": "#aec7e8", //não cnpj
+      "3": "#ff7f0e", //cnpj
+      "4": "#8647c9", //instituição
+   }
 
    var simulation = d3.forceSimulation()
       .force("link", d3.forceLink().id(function (d) { return d.id; }))
@@ -30,7 +36,7 @@ function rede(empenhos) {
 
    var circles = node.append("circle")
       .attr("r", function (d) { return calculate_edges(d.edges); })
-      .attr("fill", function (d) { return color(d.group); });
+      .attr("fill", function (d) { return color[d.group]; });
 
    // Create a drag handler and append it to the node object instead
    var drag_handler = d3.drag()
