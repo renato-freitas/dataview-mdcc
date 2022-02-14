@@ -23,6 +23,7 @@
    <script type="text/javascript" src="js/rede.js"></script>
    <script type="text/javascript" src="js/filtra_grafo.js"></script>
    <script type="text/javascript" src="js/lines.js"></script>
+   <script type="text/javascript" src="js/intera.js"></script>
    <!-- Bootstrap core CSS -->
    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -85,9 +86,10 @@
             s();
             r();
             h();
-            b2();
+            // b2();
             l()
             l2();
+            i()
 
             let comboboxCidades = document.getElementById("#selecionaCidade");
             empenhos_por_cidade_e_populacao.sort((a, b) => a.nome > b.nome).forEach(c => {
@@ -226,7 +228,7 @@
                </script>
             </div>
 
-            <br />
+            <!-- <br />
             <div class="row">
                <h4>Processos Aplicados</h4>
                <div id="b2"></div>
@@ -243,7 +245,7 @@
                      }
                   }
                </script>
-            </div>
+            </div> -->
          </div>
       </div>
 
@@ -289,11 +291,32 @@
 
 
       <br />
+
+      <div class="row">
+         <div class="col-sm">
+            <h4>Interatividade - Empenhos e Tipos de Processos</h4>
+            <div id="intera"></div>
+            <script>
+               //TODOS OS EMPENHOS
+               function i() {
+                  let d = document.getElementById("line2");
+                  d.innerHTML = null
+                  if (CIDADE !== TODAS) {
+                     let empp = empenhos.filter(d => d.nome_municipio === CIDADE);
+                     intera(empp)
+                  } else {
+                     intera(empenhos)
+                  }
+               }
+            </script>
+         </div>
+      </div>
+
       <br />
 
       <div class="row">
          <div class="col-sm">
-            <h4>Empenhos Per Capita</h4>
+            <h4>Investimento Per Capita</h4>
             <iframe width="100%" height="686" frameborder="0"
                src="https://observablehq.com/embed/@renato-freitas/homicidios-em-fortaleza-em-2012-vega-lite?cells=mapchoro"></iframe>
          </div>
